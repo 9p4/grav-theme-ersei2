@@ -10,10 +10,10 @@ form:
   fields:
     tabs:
       fields:        
-        # The Hypertext Tab is where everything else goes.
-        hypertext:
+        # The ersei2 Tab is where everything else goes.
+        ersei2:
           type: tab
-          title: Hypertext
+          title: ersei2
           fields:
             columns:
               type: columns
@@ -79,7 +79,7 @@ form:
                       type: text
                       toggleable: true
                       label: Header image file
-                      help: Image filename that exists in the page folder to be shown at the top of this page. If not provided, and header image is enabled, Hypertext will use the first image found.
+                      help: Image filename that exists in the page folder to be shown at the top of this page. If not provided, and header image is enabled, ersei2 will use the first image found.
                       placeholder: my_image.jpg
                     header.thumbnail_image_file:
                       type: text

@@ -1,10 +1,12 @@
 en:
-  THEME_HYPERTEXT:
+  THEME_ERSEI2:
     PAGINATION:
       PREVIOUS_PAGE: Previous
       NEXT_PAGE: Next
     CATEGORIES:
       CATEGORIES: Categories
+    TAGS:
+      TAGS: Tags
     DATES:
       PUBLISHED: Published
     THUMBNAIL:
@@ -13,7 +15,7 @@ en:
       BY_LINE: Running the <a href="http://getgrav.org">Grav CMS</a> using the <a href="http://hypertext.artofthesmart.com">Hypertext theme</a>.
 
 fr:
-  THEME_HYPERTEXT:
+  THEME_ERSEI2:
     PAGINATION:
       PREVIOUS_PAGE: Précédent
       NEXT_PAGE: Suivant

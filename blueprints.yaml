@@ -1,15 +1,15 @@
-name: Hypertext
+name: ersei2
 version: 2.2.7
-description: "Hypertext is a zero JS/CSS theme to create simple, fast websites."
+description: "ersei2 is a zero JS/CSS theme to create simple, fast websites."
 icon: compress
 author:
   name: Alejo Grigera Sutro
-  email: hypertext@artofthesmart.com
+  email: ersei2@artofthesmart.com
   url: http://artofthesmart.com
-homepage: https://github.com/artofthesmart/hypertext
-demo: http://hypertext.artofthesmart.com
+homepage: https://github.com/artofthesmart/ersei2
+demo: http://ersei2.artofthesmart.com
 keywords: theme, simple, compliance, fast, semantic, 1995
-bugs: https://github.com/artofthesmart/hypertext/issues
+bugs: https://github.com/artofthesmart/ersei2/issues
 license: MIT
 
 form:
@@ -165,9 +165,9 @@ form:
                       label: Select a Style
                       help: Selects from a pre-determined list of simple, fast CSS files.
                       options:
-                        default:            "hypertext (No style)"
+                        default:            "ersei2 (No style)"
                         air:                "#0 air"
-                        hypertext++:        "#1 hypertext++"
+                        ersei-plus:         "#1 ersei-plus"
                         latex:              "#2 latex"
                         marx:               "#3 marx"
                         modest:             "#4 modest"
@@ -195,7 +195,7 @@ form:
                       type: select
                       classes: fancy
                       label: Include Method
-                      help: Determines whether to prioritize single page loads (inline <style>, good for Hypertext or single-serving sites) or multiple page loads (<link>, good for CSS styles or multi-paged sites).
+                      help: Determines whether to prioritize single page loads (inline <style>, good for ersei2 or single-serving sites) or multiple page loads (<link>, good for CSS styles or multi-paged sites).
                       options:
                         default: Link (Good for enabling JS/CSS)
                         inline: Inline (Faster single page loads)
@@ -352,5 +352,5 @@ form:
               type: textarea
               label: Footer Content
               size: large
-              help: Add your optional, custom footer content here. If you need to remove the Hypertext attribution line, you can do it from the theme code in user/themes/hypertext/templates/partials/page/footer.html.twig.
+              help: Add your optional, custom footer content here. If you need to remove the ersei2 attribution line, you can do it from the theme code in user/themes/ersei2/templates/partials/page/footer.html.twig.
                         

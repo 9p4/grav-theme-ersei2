@@ -47,15 +47,8 @@
 
 <p> {# The next set of items should be somewhat close together. #}
 
-{# Image #}
-{# Must be one line to avoid dangling, clickable space #}
-{% if show_image and thumbnail_image %}
-  <a href="{{ page.url }}"><img src="{{ header_image_url }}" width="{{ header_image_width }}" height="{{ header_image_height }}"></a>
-{% endif %}
-
 {# Date #}
 {% if show_date %}
-{{ show_image and thumbnail_image ? '<br>' : '' }}
 <sub>
   {% if html5 %}
     <time datetime="{{ date|date("c") }}">{{ date|date(system.pages.dateformat.short) }}</time>
@@ -67,11 +60,23 @@
 
 {# Categories #}
 {% if page.taxonomy.category and show_cat %}
-<br>
-  {{ 'THEME_HYPERTEXT.CATEGORIES.CATEGORIES'|t }}: <small>
+<div id=categories>
+  <small>{{ 'THEME_ERSEI2.CATEGORIES.CATEGORIES'|t }}:
   {% for category in page.taxonomy.category %}
     {{ structure.use_decorators ? '[' : '' }}<a href="{{ page.parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>{{ structure.use_decorators ? ']' : '' }}{{ not loop.last ? ',' : '' }}
   {% endfor %}</small></p>
+</div>
+{% else %}
+{% endif %}
+
+{# Tags #}
+{% if page.taxonomy.tag and show_cat %}
+<div id=tags>
+  <small>{{ 'THEME_ERSEI2.TAGS.TAGS'|t }}:
+  {% for tag in page.taxonomy.tag %}
+    {{ structure.use_decorators ? '[' : '' }}<a href="{{ page.parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>{{ structure.use_decorators ? ']' : '' }}{{ not loop.last ? ',' : '' }}
+  {% endfor %}</small></p>
+</div>
 {% else %}
 {% endif %}
 

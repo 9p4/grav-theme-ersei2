@@ -1,7 +1,7 @@
-{% set structure = config.themes.hypertext.structure %}
-{% set style = config.themes.hypertext.style %}
-{% set menu = config.themes.hypertext.menu %}
-{% set partials = config.themes.hypertext.partials %}
+{% set structure = config.themes.ersei2.structure %}
+{% set style = config.themes.ersei2.style %}
+{% set menu = config.themes.ersei2.menu %}
+{% set partials = config.themes.ersei2.partials %}
 {% set html5 = structure.html_mode|default('default') == 'default' %}
 
 {% set allowCSS = page.header.allowCSS == 'enabled' or
@@ -12,7 +12,7 @@
                      style.allowJS == '1') %}
 
 {# Why set this here? Because we might want to pivot semantic flow depending on the sheet someday. #}
-{% set stylesheets = ['air', 'hypertext++', 'latex', 'marx', 'modest', 'sakura-dark-solarized', 'sakura-dark',
+{% set stylesheets = ['air', 'ersei-plus', 'latex', 'marx', 'modest', 'sakura-dark-solarized', 'sakura-dark',
                       'sakura-earthly', 'sakura-vader','sakura', 'stylize', 'tacit', 'tufte', 'w3c-chocolate', 'w3c-midnight', 'w3c-modernist',
                       'w3c-oldstyle', 'w3c-steely', 'w3c-swiss', 'w3c-traditional', 'w3c-ultramarine', 'water-dark', 'water-light', 'writ',
                       'yorha'] %}
@@ -55,9 +55,24 @@
 
   <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-  {% if structure.use_favicon %}
-  <link rel="icon" type="image/png" href="{{ url('image://favicon.png') }}" />
-  {% endif %}
+<link rel="apple-touch-icon" sizes="57x57" href="{{ url('theme://images/favicon/apple-icon-57x57.png') }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ url('theme://images/favicon/apple-icon-60x60.png') }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ url('theme://images/favicon/apple-icon-72x72.png') }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ url('theme://images/favicon/apple-icon-76x76.png') }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ url('theme://images/favicon/apple-icon-114x114.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ url('theme://images/favicon/apple-icon-120x120.png') }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ url('theme://images/favicon/apple-icon-144x144.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ url('theme://images/favicon/apple-icon-152x152.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://images/favicon/apple-icon-180x180.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url('theme://images/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ url('theme://images/favicon/favicon-96x96.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url('theme://images/favicon/favicon-16x16.png') }}">
+<link rel="icon" href="{{ url('theme://images/favicon/favicon.svg') }}">
+<link rel="mask-icon" href="{{ url('theme://images/favicon/favicon-mask.svg') }}" color="#000000">
+<link rel="manifest" href="{{ url('theme://images/favicon/manifest.json') }}">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="{{ url('theme://images/favicon/ms-icon-144x144.png') }}">
+<meta name="theme-color" content="#000000">
 
   {% include 'partials/page/js-css.html.twig' %}
 {% endblock head %}

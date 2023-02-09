@@ -1,16 +1,5 @@
 <hr/>
-{# Write the custom footer, if available. #}
-{% if partials.footer.custom_footer|default('') != '' %}
-    {% if partials.footer.custom_footer_type|default('markdown') == 'markdown' %}
-        {{ partials.footer.custom_footer|markdown }}
-    {% else %}
-        {{ partials.footer.custom_footer|raw }}
-    {% endif %}
-{% endif %}
-
-{# Be cool; please leave the attribution in unless you really need to remove it. ;) #}
-<p>{{ 'THEME_HYPERTEXT.FOOTER.BY_LINE'|t|raw }}</p>
-
+<p><a href="/copyright">CC-BY-SA 4.0</a> | <a href="/copyright">Privacy</a> | <a href="/search">Search</a> | <a href="/donate">Donate</a> | We use no cookies</p>
 {% block bottom %}
 {% if allowJS %}
 {{ assets.js('bottom')|raw }}

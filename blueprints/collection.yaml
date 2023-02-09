@@ -13,7 +13,7 @@ form:
               fields:
                 header.child_type:
                   default: item
-        hypertext:
+        ersei2:
           fields:
             columns:
               fields:
@@ -78,7 +78,7 @@ form:
                     header.render.children.style:
                       type: select
                       label: Render Style
-                      help: How you want child pages presented on the page. See Hypertext docs for examples.
+                      help: How you want child pages presented on the page. See ersei2 docs for examples.
                       default: summaries
                       options:
                         summary: Summaries

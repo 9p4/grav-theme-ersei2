@@ -16,10 +16,10 @@
 
   {% for paginate in pagination %}
     {% if paginate.isCurrent %}
-      , <strong>{{ paginate.number }}</strong>
+      | <strong>{{ paginate.number }}</strong>
     {% elseif paginate.isInDelta %}
       {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
-      , <a href="{{ url }}">{{ paginate.number }}</a>
+      | <a href="{{ url }}">{{ paginate.number }}</a>
     {% elseif paginate.isDeltaBorder %}
       <span class="gap">&hellip;</span>
     {% endif %}
@@ -27,9 +27,9 @@
 
   {% if pagination.hasNext %}
     {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-    , <a rel="next" href="{{ url }}">{{ 'THEME_ERSEI2.PAGINATION.NEXT_PAGE'|t|raw }}</a>
+    | <a rel="next" href="{{ url }}">{{ 'THEME_ERSEI2.PAGINATION.NEXT_PAGE'|t|raw }}</a>
   {% else %}
-    , <span>{{ 'THEME_ERSEI2.PAGINATION.NEXT_PAGE'|t|raw }}</span>
+    | <span>{{ 'THEME_ERSEI2.PAGINATION.NEXT_PAGE'|t|raw }}</span>
   {% endif %}
 {{ html5 ? '</nav>' : '</div>' }}
 

@@ -73,6 +73,10 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="{{ url('theme://images/favicon/ms-icon-144x144.png') }}">
 <meta name="theme-color" content="#000000">
+{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : "/"~lang~"/blog" %}
+<link rel="alternate" type="application/atom+xml" title="Ersei 'n Stuff" href="{{ feed_url }}.atom" />
+<link rel="alternate" type="application/rss+xml" title="Ersei 'n Stuff" href="{{ feed_url }}.rss" />
+<link rel="alternate" type="application/json" title="Ersei 'n Stuff" href="{{ feed_url }}.json" />
 
   {% include 'partials/page/js-css.html.twig' %}
 {% endblock head %}
